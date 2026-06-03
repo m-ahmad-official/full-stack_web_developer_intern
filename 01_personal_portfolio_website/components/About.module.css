@@ -1,0 +1,137 @@
+.about {
+  padding: 6rem 4rem;
+  background: var(--surface);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* Image column */
+.imgCol {
+  position: relative;
+}
+
+.imgFrame {
+  aspect-ratio: 5 / 5;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgPlaceholder {
+  font-size: 6rem;
+  opacity: 0.2;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.availBadge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: var(--accent);
+  color: #000;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.imgAccent {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  width: 80%;
+  height: 80%;
+  border: 2px solid var(--accent);
+  z-index: -1;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.statBox {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.statNum {
+  font-family: var(--ff-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Text column */
+.para {
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 1.2rem;
+}
+.para strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.detail {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+}
+.detailKey {
+  color: var(--muted);
+  min-width: 70px;
+}
+.detailVal {
+  color: var(--text);
+  font-weight: 500;
+}
+.highlight {
+  color: var(--accent) !important;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 5rem 1.5rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .imgAccent {
+    display: none;
+  }
+}

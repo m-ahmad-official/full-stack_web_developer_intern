@@ -1,0 +1,76 @@
+.skills {
+  padding: 6rem 4rem;
+  background: var(--bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  transition: border-color 0.2s;
+}
+.card:hover {
+  border-color: rgba(200, 169, 110, 0.3);
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(124, 107, 234, 0.12);
+  border: 1px solid rgba(124, 107, 234, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.skillItem {
+  margin-bottom: 1rem;
+}
+
+.skillMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+.skillName {
+  color: var(--text);
+}
+.skillPct {
+  color: var(--accent);
+  font-family: var(--ff-display);
+}
+
+.bar {
+  height: 3px;
+  background: var(--surface2);
+  overflow: hidden;
+}
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 5rem 1.5rem;
+  }
+}
