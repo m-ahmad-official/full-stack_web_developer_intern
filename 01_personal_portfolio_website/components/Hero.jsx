@@ -49,7 +49,7 @@ export default function Hero() {
           at Nexsoft Solutions.
         </p>
         <div className={styles.btns}>
-          <a href="/projects" className="btn-primary" target="_blank">
+          <a href="#projects" className="btn-primary">
             View Projects
           </a>
           <a href="#contact" className="btn-outline">

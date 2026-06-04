@@ -2,34 +2,32 @@ import styles from "./Projects.module.css";
 
 const projects = [
   {
-    title: "ShopNext — E-Commerce Platform",
+    title: "Bandage — E-Commerce Platform",
     desc: "A full-featured online store with cart, authentication, payment integration, and an admin dashboard built with Next.js.",
-    tags: ["Next.js", "MongoDB", "Stripe", "Tailwind CSS"],
-    emoji: "🛒",
+    tags: ["Next.js", "Sanity", "Stripe", "Tailwind CSS"],
     type: "Full Stack",
-    github: "https://github.com/yourusername/shopnext",
-    demo: "https://shopnext.vercel.app",
-    gradient: "linear-gradient(135deg, #1a1a2e, #16213e)",
+    github: "https://github.com/m-ahmad-official/final-hackathon",
+    demo: "https://final-hackathon-6316.vercel.app",
+    image: "/project1.png",
   },
   {
-    title: "TalkSpace — Real-time Chat",
-    desc: "Real-time messaging app with rooms, online presence indicators, file sharing, and Socket.io powered live updates.",
-    tags: ["React", "Node.js", "Socket.io", "MongoDB"],
-    emoji: "💬",
-    type: "MERN Stack",
-    github: "https://github.com/yourusername/talkspace",
-    demo: "https://talkspace.vercel.app",
-    gradient: "linear-gradient(135deg, #0d1b2a, #1b2838)",
+    title: "Physical AI & Humanoid Robotics Book",
+    desc: "Built as a learning project by Ahmed to explore the fundamentals of Physical AI and humanoid robotics using ROS 2.",
+    tags: ["Hackathon", "Claude Code", "Spec Development", "Book"],
+    type: "Docusaurus",
+    github:
+      "https://github.com/m-ahmad-official/hackathon-1-humanoid-ai-robotics",
+    demo: "https://hackathon-1-humanoid-ai-robotics.vercel.app",
+    image: "/project2.png",
   },
   {
-    title: "TaskFlow — Project Manager",
-    desc: "Kanban-style task management tool with drag-and-drop, team collaboration, notifications and deadline tracking.",
-    tags: ["React", "Express", "JWT", "MongoDB"],
-    emoji: "✅",
-    type: "REST API",
-    github: "https://github.com/yourusername/taskflow",
-    demo: "https://taskflow.vercel.app",
-    gradient: "linear-gradient(135deg, #1a0a2e, #2d1b4e)",
+    title: "Marvel Studios — Dynamic Blog",
+    desc: "The Studio connects to Sanity Content Lake, hosted content APIs with a flexible query language, on-demand image transformations, powerful patching, and more.",
+    tags: ["Next.js", "Sanity"],
+    type: "Next.js",
+    github: "https://github.com/m-ahmad-official/dynamic-blog",
+    demo: "https://dynamic-blog-eta.vercel.app",
+    image: "/project3.png",
   },
 ];
 
@@ -43,9 +41,14 @@ export default function Projects() {
       <div className={styles.grid}>
         {projects.map((p) => (
           <div key={p.title} className={styles.card}>
-            <div className={styles.thumb} style={{ background: p.gradient }}>
-              <span className={styles.thumbLabel}>{p.type}</span>
-              <span className={styles.thumbEmoji}>{p.emoji}</span>
+            <div
+              className={styles.thumb}
+              style={{
+                backgroundImage: `url(${p.image})`,
+                backgroundSize: "cover",
+              }}
+            >
+              {/* <span className={styles.thumbLabel}>{p.type}</span> */}
             </div>
             <div className={styles.body}>
               <h3 className={styles.title}>{p.title}</h3>

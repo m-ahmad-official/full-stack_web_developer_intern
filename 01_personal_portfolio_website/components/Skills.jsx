@@ -18,19 +18,19 @@ const categories = [
     icon: "⚙️",
     skills: [
       { name: "Node.js", pct: 85 },
-      { name: "Express.js", pct: 80 },
-      { name: "REST APIs", pct: 88 },
-      { name: "JWT Auth", pct: 78 },
+      { name: "FastAPI", pct: 80 },
+      { name: "Python", pct: 88 },
+      { name: "PostgreSQL", pct: 78 },
     ],
   },
   {
     title: "Database & Tools",
     icon: "🗄",
     skills: [
-      { name: "MongoDB", pct: 83 },
+      { name: "Neon", pct: 83 },
       { name: "Git & GitHub", pct: 87 },
-      { name: "JavaScript ES6+", pct: 92 },
-      { name: "Postman", pct: 80 },
+      { name: "Vercel", pct: 92 },
+      { name: "Docker", pct: 80 },
     ],
   },
 ];

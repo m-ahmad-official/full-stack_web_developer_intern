@@ -10,31 +10,28 @@
   align-items: center;
 }
 
-/* Image column */
+/* ── Image column ─────────────────────── */
 .imgCol {
   position: relative;
 }
 
 .imgFrame {
-  aspect-ratio: 5 / 5;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.imgPlaceholder {
-  font-size: 6rem;
-  opacity: 0.2;
+  border: 1px solid var(--border);
 }
 
 .profileImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  object-position: top center;
   display: block;
+  border-radius: 0;
 }
 
 .availBadge {
@@ -60,6 +57,7 @@
   z-index: -1;
 }
 
+/* Stats (currently commented out but kept for later) */
 .statsGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -88,7 +86,7 @@
   letter-spacing: 0.08em;
 }
 
-/* Text column */
+/* ── Text column ──────────────────────── */
 .para {
   color: var(--muted);
   line-height: 1.9;
@@ -123,15 +121,41 @@
   color: var(--accent) !important;
 }
 
+/* ── Mobile ───────────────────────────── */
 @media (max-width: 768px) {
   .about {
-    padding: 5rem 1.5rem;
+    padding: 4rem 1.5rem;
   }
+
   .grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
   }
+
+  /* Image takes sensible size on mobile */
+  .imgCol {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .imgFrame {
+    aspect-ratio: 3 / 4;
+  }
+
   .imgAccent {
     display: none;
+  }
+
+  /* Details grid becomes single column on very small screens */
+  .detailsGrid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .imgCol {
+    max-width: 260px;
   }
 }
