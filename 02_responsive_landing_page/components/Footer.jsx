@@ -57,7 +57,7 @@ export default function Footer() {
             ))}
           </nav>
           <span className={styles.copy}>
-            © 2025 Nexora Technologies. All rights reserved.
+            © 2026 Nexora Technologies. All rights reserved.
           </span>
         </div>
       </div>
