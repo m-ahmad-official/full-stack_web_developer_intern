@@ -16,7 +16,7 @@ const basicProjects = [
     id: 2,
     title: "Responsive Landing Page",
     desc: "Modern product landing page with hero banner, features grid, testimonials and CTA.",
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: ["Next.js", "CSS Modules", "JavaScript"],
     icon: "🌐",
     github:
       "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/02_responsive_landing_page",
@@ -26,7 +26,7 @@ const basicProjects = [
     id: 3,
     title: "To-Do List Application",
     desc: "Task manager with add, delete, complete toggle and local storage persistence.",
-    tags: ["React", "useState", "localStorage"],
+    tags: ["Next.js", "useState", "localStorage"],
     icon: "✅",
     github:
       "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/03_to-do_list_application",
@@ -36,10 +36,11 @@ const basicProjects = [
     id: 4,
     title: "Calculator App",
     desc: "Fully functional calculator with keyboard support, history log and clear functions.",
-    tags: ["React", "CSS Grid", "JavaScript"],
+    tags: ["Next.js", "useCallback", "TypeScript"],
     icon: "🧮",
-    github: "https://github.com/yourusername/calculator",
-    demo: "https://calculator.vercel.app",
+    github:
+      "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/04_calculator_app",
+    demo: "https://calculator-app-ahmed.vercel.app",
   },
   {
     id: 5,
