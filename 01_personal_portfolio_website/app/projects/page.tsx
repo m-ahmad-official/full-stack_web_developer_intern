@@ -8,8 +8,9 @@ const basicProjects = [
     desc: "Responsive multi-section portfolio with Hero, About, Skills, Projects & Contact sections.",
     tags: ["Next.js", "CSS Modules", "Responsive"],
     icon: "🧑‍💻",
-    github: "https://github.com/yourusername/portfolio",
-    demo: "https://portfolio.vercel.app",
+    github:
+      "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/01_personal_portfolio_website",
+    demo: "https://portfolio-ahmed-nexsoft.vercel.app",
   },
   {
     id: 2,
@@ -17,8 +18,9 @@ const basicProjects = [
     desc: "Modern product landing page with hero banner, features grid, testimonials and CTA.",
     tags: ["HTML", "CSS", "JavaScript"],
     icon: "🌐",
-    github: "https://github.com/yourusername/landing-page",
-    demo: "https://landing-page.vercel.app",
+    github:
+      "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/02_responsive_landing_page",
+    demo: "https://landing-nexora-seven.vercel.app",
   },
   {
     id: 3,
@@ -26,8 +28,9 @@ const basicProjects = [
     desc: "Task manager with add, delete, complete toggle and local storage persistence.",
     tags: ["React", "useState", "localStorage"],
     icon: "✅",
-    github: "https://github.com/yourusername/todo-app",
-    demo: "https://todo-app.vercel.app",
+    github:
+      "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/03_to-do_list_application",
+    demo: "https://todo-list-ahmed.vercel.app",
   },
   {
     id: 4,
