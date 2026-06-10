@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── DAY THEME (6am–6pm) ──────────────────── */
+:root,
+[data-theme="day"] {
+  --bg-from: #7ec8e3;
+  --bg-to: #f5f0e8;
+  --bg-mid: #a8d8ea;
+  --card-bg: rgba(255, 255, 255, 0.45);
+  --card-border: rgba(255, 255, 255, 0.7);
+  --card-shadow: 0 8px 32px rgba(100, 160, 200, 0.2);
+  --pill-bg: rgba(255, 255, 255, 0.5);
+  --pill-border: rgba(255, 255, 255, 0.8);
+  --text: #1a2744;
+  --text2: #2d4a7a;
+  --muted: #5a7a9a;
+  --white: #ffffff;
+  --input-bg: rgba(255, 255, 255, 0.6);
+  --input-border: rgba(255, 255, 255, 0.9);
+  --input-focus: rgba(30, 100, 200, 0.25);
+  --btn-bg: #1e64c8;
+  --btn-hover: #1550a8;
+  --detail-bg: rgba(255, 255, 255, 0.35);
+  --detail-border: rgba(255, 255, 255, 0.6);
+  --accent: #1e64c8;
+}
+
+/* ── NIGHT THEME (6pm–6am) ────────────────── */
+[data-theme="night"] {
+  --bg-from: #0b0f2e;
+  --bg-to: #1a1040;
+  --bg-mid: #11163d;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  --pill-bg: rgba(255, 255, 255, 0.08);
+  --pill-border: rgba(255, 255, 255, 0.12);
+  --text: #e8eaf6;
+  --text2: #b0b8e0;
+  --muted: #7080b0;
+  --white: #ffffff;
+  --input-bg: rgba(255, 255, 255, 0.08);
+  --input-border: rgba(255, 255, 255, 0.15);
+  --input-focus: rgba(130, 100, 255, 0.35);
+  --btn-bg: #6c4fd8;
+  --btn-hover: #5a3ec0;
+  --detail-bg: rgba(255, 255, 255, 0.05);
+  --detail-border: rgba(255, 255, 255, 0.08);
+  --accent: #8b7cf8;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(
+    160deg,
+    var(--bg-from) 0%,
+    var(--bg-mid) 50%,
+    var(--bg-to) 100%
+  );
+  transition: background 1s ease;
+}
