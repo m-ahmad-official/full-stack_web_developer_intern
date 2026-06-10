@@ -48,8 +48,9 @@ const basicProjects = [
     desc: "Real-time weather by city using OpenWeatherMap API with 5-day forecast display.",
     tags: ["Next.js", "API", "Axios"],
     icon: "⛅",
-    github: "https://github.com/yourusername/weather-app",
-    demo: "https://weather-app.vercel.app",
+    github:
+      "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/05_weather_app_using_api",
+    demo: "https://weather-app5-iota.vercel.app",
   },
 ];
 
