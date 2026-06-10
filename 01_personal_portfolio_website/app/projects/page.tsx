@@ -5,8 +5,8 @@ const basicProjects = [
   {
     id: 1,
     title: "Personal Portfolio Website",
-    desc: "Responsive multi-section portfolio with Hero, About, Skills, Projects & Contact sections.",
-    tags: ["Next.js", "CSS Modules", "Responsive"],
+    desc: "A fully responsive personal portfolio with animated sections, skill bars, and a contact form.",
+    tags: ["Next.js", "CSS Modules", "JavaScript", "Responsive"],
     icon: "🧑‍💻",
     github:
       "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/01_personal_portfolio_website",
@@ -15,8 +15,8 @@ const basicProjects = [
   {
     id: 2,
     title: "Responsive Landing Page",
-    desc: "Modern product landing page with hero banner, features grid, testimonials and CTA.",
-    tags: ["Next.js", "CSS Modules", "JavaScript"],
+    desc: "A modern SaaS-style landing page with hero, services, and interactive pricing toggle.",
+    tags: ["Next.js", "JavaScript", "CSS Modules", "Animations"],
     icon: "🌐",
     github:
       "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/02_responsive_landing_page",
@@ -25,8 +25,8 @@ const basicProjects = [
   {
     id: 3,
     title: "To-Do List Application",
-    desc: "Task manager with add, delete, complete toggle and local storage persistence.",
-    tags: ["Next.js", "useState", "localStorage"],
+    desc: "A feature-rich task manager with priorities, filtering, edit mode, and localStorage persistence.",
+    tags: ["Next.js", "TypeScript", "localStorage", "CSS Modules"],
     icon: "✅",
     github:
       "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/03_to-do_list_application",
@@ -35,8 +35,8 @@ const basicProjects = [
   {
     id: 4,
     title: "Calculator App",
-    desc: "Fully functional calculator with keyboard support, history log and clear functions.",
-    tags: ["Next.js", "useCallback", "TypeScript"],
+    desc: "A dark-themed calculator with full keyboard support, history panel, and error handling.",
+    tags: ["Next.js", "TypeScript", "Keyboard Events", "CSS Modules"],
     icon: "🧮",
     github:
       "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/04_calculator_app",
@@ -45,8 +45,8 @@ const basicProjects = [
   {
     id: 5,
     title: "Weather App using API",
-    desc: "Real-time weather by city using OpenWeatherMap API with 5-day forecast display.",
-    tags: ["Next.js", "API", "Axios"],
+    desc: "Real-time weather app with city search, auto day/night theme, and unit toggle using OpenWeatherMap API.",
+    tags: ["Next.js", "TypeScript", "REST API", "CSS Modules"],
     icon: "⛅",
     github:
       "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/05_weather_app_using_api",
@@ -227,8 +227,8 @@ export default function ProjectsPage() {
             </div>
             <h2 className={styles.sectionTitle}>Basic Level Projects</h2>
             <p className={styles.sectionDesc}>
-              Foundation projects to build core HTML, CSS, JavaScript and React
-              skills.
+              Foundation of frontend development using Next.js, React, and CSS
+              Modules.
             </p>
             <div className={`${styles.sectionLine} ${styles.lineBasic}`} />
           </div>
