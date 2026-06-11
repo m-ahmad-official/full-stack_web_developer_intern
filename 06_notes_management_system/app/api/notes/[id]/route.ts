@@ -6,18 +6,19 @@ import Note from "@/models/Note";
 
 export async function PUT(
   req: NextRequest,
-  { params }: { params: { id: string } },
+  { params }: { params: Promise<{ id: string }> },
 ) {
   try {
+    const { id } = await params;
     const session = await getServerSession(authOptions);
     if (!session)
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     const body = await req.json();
     await connectDB();
     const note = await Note.findOneAndUpdate(
-      { _id: params.id, userId: (session.user as any).id },
+      { _id: id, userId: (session.user as any).id },
       { ...body },
-      { new: true },
+      { returnDocument: "after" },
     );
     if (!note)
       return NextResponse.json({ error: "Not found" }, { status: 404 });
@@ -29,17 +30,15 @@ export async function PUT(
 
 export async function DELETE(
   _: NextRequest,
-  { params }: { params: { id: string } },
+  { params }: { params: Promise<{ id: string }> },
 ) {
   try {
+    const { id } = await params;
     const session = await getServerSession(authOptions);
     if (!session)
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     await connectDB();
-    await Note.findOneAndDelete({
-      _id: params.id,
-      userId: (session.user as any).id,
-    });
+    await Note.findOneAndDelete({ _id: id, userId: (session.user as any).id });
     return NextResponse.json({ message: "Deleted" });
   } catch {
     return NextResponse.json({ error: "Server error" }, { status: 500 });
