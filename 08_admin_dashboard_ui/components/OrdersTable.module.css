@@ -1,0 +1,113 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.sub {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+.viewAll {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text2);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: var(--ff);
+}
+.viewAll:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.tableWrap {
+  overflow-x: auto;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+.table th {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.table td {
+  padding: 0.75rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text2);
+  white-space: nowrap;
+}
+.table tr:last-child td {
+  border-bottom: none;
+}
+.table tr:hover td {
+  background: var(--surface2);
+}
+.orderId {
+  font-weight: 600;
+  color: var(--primary) !important;
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+.customer {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.62rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.product {
+  color: var(--text) !important;
+  font-weight: 500;
+}
+.amount {
+  color: var(--text) !important;
+  font-weight: 700;
+}
+.status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: 100px;
+}
+.completed {
+  background: var(--green-light);
+  color: var(--green);
+}
+.pending {
+  background: var(--amber-light);
+  color: var(--amber);
+}
+.cancelled {
+  background: var(--red-light);
+  color: var(--red);
+}

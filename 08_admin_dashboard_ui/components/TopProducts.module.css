@@ -1,0 +1,88 @@
+.header {
+  margin-bottom: 1.25rem;
+}
+.title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.sub {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+.rank {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.barWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.bar {
+  flex: 1;
+  height: 5px;
+  background: var(--surface2);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.barFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), #a78bfa);
+  border-radius: 100px;
+  transition: width 1s ease;
+}
+.pct {
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.right {
+  text-align: right;
+  flex-shrink: 0;
+}
+.revenue {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.sales {
+  font-size: 0.7rem;
+  color: var(--muted);
+}
