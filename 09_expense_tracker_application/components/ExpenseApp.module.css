@@ -1,0 +1,218 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+.blob1 {
+  position: fixed;
+  top: -200px;
+  left: -200px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 217, 126, 0.07) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+.blob2 {
+  position: fixed;
+  bottom: -200px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 77, 109, 0.07) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.appName {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--income), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.appSub {
+  font-size: 0.8rem;
+  color: var(--text2);
+  margin-top: 0.2rem;
+}
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--income), #00b368);
+  color: #000;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.01em;
+}
+.addBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 217, 126, 0.3);
+}
+.addBtn span {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.midRow {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.25rem;
+  align-items: start;
+}
+.quickAdd {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.quickTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.quickBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.quickIncome {
+  background: var(--income-light);
+  color: var(--income);
+}
+.quickExpense {
+  background: var(--expense-light);
+  color: var(--expense);
+}
+.quickIncome:hover {
+  background: var(--income-mid);
+}
+.quickExpense:hover {
+  background: var(--expense-mid);
+}
+.tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  background: var(--surface2);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+  font-size: 0.78rem;
+  color: var(--text2);
+  line-height: 1.5;
+  margin-top: 0.25rem;
+}
+.historySection {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+.historyHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.historyTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.historySub {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+.filterTabs {
+  display: flex;
+  gap: 0.25rem;
+  background: var(--surface2);
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+}
+.filterTab {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text2);
+  transition: all 0.15s;
+  font-family: var(--ff);
+}
+.filterTab:hover {
+  color: var(--text);
+  background: var(--surface3);
+}
+.filterActive {
+  background: var(--surface3) !important;
+  color: var(--text) !important;
+}
+.filterIncome {
+  color: var(--income) !important;
+}
+.filterExpense {
+  color: var(--expense) !important;
+}
+@media (max-width: 900px) {
+  .midRow {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 1.25rem 1rem 3rem;
+  }
+  .appName {
+    font-size: 1.6rem;
+  }
+}

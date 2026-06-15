@@ -1,0 +1,144 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.balanceCard {
+  background: linear-gradient(135deg, #0d2137 0%, #0a1628 100%);
+  border: 1px solid rgba(110, 231, 247, 0.15);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 0 40px rgba(110, 231, 247, 0.06);
+}
+.balanceTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.balanceLabel {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.balanceBadge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: 100px;
+  letter-spacing: 0.04em;
+}
+.positive {
+  background: var(--income-light);
+  color: var(--income);
+}
+.negative {
+  background: var(--expense-light);
+  color: var(--expense);
+}
+.balanceAmount {
+  font-family: var(--ff-mono);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.balanceRed {
+  color: var(--expense) !important;
+}
+.progressWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.progress {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--income), var(--expense));
+  border-radius: 100px;
+  transition: width 0.8s ease;
+}
+.progressLabel {
+  font-size: 0.7rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.miniCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  transition: transform 0.2s;
+}
+.miniCard:hover {
+  transform: translateY(-2px);
+}
+.miniIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--income-light);
+  color: var(--income);
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.expenseIcon {
+  background: var(--expense-light);
+  color: var(--expense);
+}
+.savingsIcon {
+  background: var(--accent-light);
+  font-size: 0.9rem;
+}
+.miniLabel {
+  font-size: 0.72rem;
+  color: var(--text2);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.miniAmount {
+  font-family: var(--ff-mono);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--income);
+}
+.expenseAmount {
+  color: var(--expense);
+}
+.savingsAmount {
+  color: var(--accent);
+}
+@media (max-width: 1024px) {
+  .wrap {
+    grid-template-columns: 1fr 1fr;
+  }
+  .balanceCard {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 480px) {
+  .wrap {
+    grid-template-columns: 1fr;
+  }
+  .balanceCard {
+    grid-column: span 1;
+  }
+}
