@@ -86,7 +86,10 @@ export default function SpendingChart({ transactions }: Props) {
               color: "var(--text)",
             }}
             cursor={{ fill: "rgba(255,255,255,0.03)" }}
-            formatter={(val: number) => [`$${val.toFixed(2)}`, "Amount"]}
+            formatter={(value) => [
+              `$${Number(value ?? 0).toFixed(2)}`,
+              "Amount",
+            ]}
           />
           <Bar dataKey="amount" radius={[6, 6, 0, 0]}>
             {chartData.map((_, i) => (
