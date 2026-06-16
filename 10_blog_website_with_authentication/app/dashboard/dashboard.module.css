@@ -1,0 +1,240 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+}
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.title {
+  font-family: var(--ff-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.sub {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+.newBtn {
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.newBtn:hover {
+  background: var(--accent);
+}
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.statCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: transform 0.2s;
+}
+.statCard:hover {
+  transform: translateY(-2px);
+}
+.statIcon {
+  font-size: 1.4rem;
+}
+.statValue {
+  font-family: var(--ff-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+.statLabel {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+.tableCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+.tableHeader {
+  margin-bottom: 1.25rem;
+}
+.tableTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--muted);
+}
+.empty {
+  text-align: center;
+  padding: 3rem;
+  color: var(--muted);
+}
+.emptyLink {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+.tableWrap {
+  overflow-x: auto;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+.table th {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.table td {
+  padding: 0.85rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text2);
+}
+.table tr:last-child td {
+  border-bottom: none;
+}
+.table tr:hover td {
+  background: var(--surface2);
+}
+.postTitle a {
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.postTitle a:hover {
+  color: var(--accent);
+}
+.catBadge {
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
+  border-radius: 100px;
+}
+.statusBadge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+}
+.published {
+  background: var(--green-light);
+  color: var(--green);
+}
+.draft {
+  background: var(--surface2);
+  color: var(--muted);
+}
+.views {
+  font-weight: 600;
+  color: var(--text);
+}
+.date {
+  white-space: nowrap;
+  font-size: 0.78rem;
+}
+.rowActions {
+  display: flex;
+  gap: 0.4rem;
+}
+.editBtn {
+  background: var(--blue-light);
+  color: var(--blue);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+.editBtn:hover {
+  background: var(--blue);
+  color: #fff;
+}
+.publishBtn {
+  background: var(--green-light);
+  color: var(--green);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: var(--ff);
+}
+.publishBtn:hover {
+  background: var(--green);
+  color: #fff;
+}
+.deleteBtn {
+  background: var(--red-light);
+  color: var(--red);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: var(--ff);
+}
+.deleteBtn:hover {
+  background: var(--red);
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .statsRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main {
+    padding: 5rem 1rem 3rem;
+  }
+}
+@media (max-width: 480px) {
+  .statsRow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
