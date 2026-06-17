@@ -58,47 +58,59 @@ const mediumProjects = [
   {
     id: 6,
     title: "Notes Management System",
-    desc: "Full CRUD notes app with categories, rich text editor and search functionality.",
-    tags: ["React", "Node.js", "MongoDB"],
+    desc: "A full-stack notes app with JWT auth, 7 color themes, pin/unpin, search, and MongoDB database.",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "NextAuth.js",
+      "bcryptjs",
+      "CSS Modules",
+    ],
     icon: "📝",
-    github: "https://github.com/yourusername/notes-app",
-    demo: "https://notes-app.vercel.app",
+    github:
+      "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/06_notes_management_system",
+    demo: "https://noteify-ahmed.vercel.app",
   },
   {
     id: 7,
     title: "Movie Search Application",
-    desc: "Search movies via TMDB API with detailed info, ratings and watchlist feature.",
-    tags: ["Next.js", "TMDB API", "Tailwind"],
+    desc: "Real-time movie search with TMDB API, detail pages, cast, trailer links, and load-more pagination.",
+    tags: ["Next.js", "TypeScript", "TMDB API", "CSS Modules"],
     icon: "🎬",
-    github: "https://github.com/yourusername/movie-search",
-    demo: "https://movie-search.vercel.app",
+    github:
+      "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/07_movie_search_application",
+    demo: "https://movie-cinesearch.vercel.app",
   },
   {
     id: 8,
     title: "Admin Dashboard UI",
-    desc: "Analytics dashboard with charts, tables, user management and dark/light mode.",
-    tags: ["React", "Chart.js", "CSS Modules"],
+    desc: "Analytics dashboard with dark/light mode, revenue charts, orders table, and sidebar navigation.",
+    tags: ["Next.js", "TypeScript", "Recharts", "CSS Modules"],
     icon: "📊",
-    github: "https://github.com/yourusername/admin-dashboard",
-    demo: "https://admin-dashboard.vercel.app",
+    github:
+      "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/08_admin_dashboard_ui",
+    demo: "https://admin-dashboard-ahmed.vercel.app",
   },
   {
     id: 9,
     title: "Expense Tracker Application",
-    desc: "Track income and expenses with pie charts, monthly reports and budget alerts.",
-    tags: ["React", "Context API", "Recharts"],
+    desc: "Full-stack income/expense tracker with MongoDB, spending chart, 13 categories, and savings rate.",
+    tags: ["Next.js", "TypeScript", "MongoDB", "Recharts", "CSS Modules"],
     icon: "💰",
-    github: "https://github.com/yourusername/expense-tracker",
-    demo: "https://expense-tracker.vercel.app",
+    github:
+      "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/09_expense_tracker_application",
+    demo: "https://expensetrackerapplication-seven.vercel.app",
   },
   {
     id: 10,
     title: "Blog Website with Authentication",
-    desc: "Full blog with JWT auth, create/edit/delete posts, comments and user profiles.",
-    tags: ["Next.js", "MongoDB", "JWT"],
+    desc: "Full-stack blog with JWT auth, create/edit/delete posts, draft system, search, and author dashboard.",
+    tags: ["Next.js", "TypeScript", "MongoDB", "NextAuth.js", "CSS Modules"],
     icon: "✍️",
-    github: "https://github.com/yourusername/blog-app",
-    demo: "https://blog-app.vercel.app",
+    github:
+      "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/10_blog_website_with_authentication",
+    demo: "https://devnotes-blog.vercel.app",
   },
 ];
 
@@ -246,8 +258,8 @@ export default function ProjectsPage() {
             </div>
             <h2 className={styles.sectionTitle}>Medium Level Projects</h2>
             <p className={styles.sectionDesc}>
-              Intermediate projects introducing APIs, authentication and state
-              management.
+              Full-stack applications with APIs, authentication, databases, and
+              real-world features.
             </p>
             <div className={`${styles.sectionLine} ${styles.lineMedium}`} />
           </div>
