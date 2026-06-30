@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+@layer base {
+  body {
+    @apply bg-vault-dark text-vault-light font-sans antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+  input,
+  select,
+  textarea {
+    @apply outline-none;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-coffee-600 hover:bg-coffee-500 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 active:scale-95;
+  }
+  .btn-secondary {
+    @apply border border-vault-border hover:border-coffee-500 text-vault-muted hover:text-vault-light px-6 py-3 rounded-lg transition-all duration-200;
+  }
+  .btn-ghost {
+    @apply hover:bg-vault-card text-vault-muted hover:text-vault-light px-4 py-2 rounded-lg transition-all duration-200;
+  }
+  .card {
+    @apply bg-vault-card border border-vault-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-coffee-600;
+  }
+  .input-field {
+    @apply w-full bg-vault-dark border border-vault-border text-vault-light placeholder-vault-muted px-4 py-3 rounded-lg focus:border-coffee-500 transition-colors duration-200;
+  }
+  .section-eyebrow {
+    @apply text-xs font-semibold tracking-[3px] text-coffee-400 uppercase mb-3;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-display font-bold text-vault-light mb-4;
+  }
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1209;
+}
+::-webkit-scrollbar-thumb {
+  background: #8a4a1c;
+  border-radius: 3px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
