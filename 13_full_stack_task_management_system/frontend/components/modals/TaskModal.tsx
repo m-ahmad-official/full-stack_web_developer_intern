@@ -121,7 +121,7 @@ export default function TaskModal({
                 className={styles.select}
                 value={form.status}
                 onChange={(e) =>
-                  setForm((p) => ({ ...p, status: e.target.value }))
+                  setForm((p) => ({ ...p, status: e.target.value as Status }))
                 }
                 style={{ color: sc.color }}
               >
@@ -138,7 +138,10 @@ export default function TaskModal({
                 className={styles.select}
                 value={form.priority}
                 onChange={(e) =>
-                  setForm((p) => ({ ...p, priority: e.target.value }))
+                  setForm((p) => ({
+                    ...p,
+                    priority: e.target.value as Priority,
+                  }))
                 }
                 style={{ color: pc.color }}
               >
