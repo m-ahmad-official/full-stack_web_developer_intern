@@ -1,0 +1,348 @@
+/* Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+.column {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.colHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.colLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.colDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.colTitle {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.colCount {
+  background: var(--surface2);
+  color: var(--text2);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 100px;
+}
+.colAddBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 1.1rem;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  transition: all 0.15s;
+}
+.colAddBtn:hover {
+  background: var(--violet-light);
+  color: var(--violet);
+}
+.taskList {
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  min-height: 80px;
+}
+.emptyCol {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.addTaskBtn {
+  background: none;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.15s;
+  width: 100%;
+  font-family: var(--ff);
+}
+.addTaskBtn:hover {
+  border-color: var(--violet);
+  color: var(--violet);
+  background: var(--violet-light);
+}
+
+/* Task card */
+.card {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.25s ease both;
+}
+.card:hover {
+  border-color: var(--border2);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.priorityBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+  margin-top: 0.2rem;
+}
+.priorityBadge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 100px;
+  letter-spacing: 0.04em;
+}
+.deleteBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 0.72rem;
+  padding: 0.2rem;
+  border-radius: 4px;
+  transition: all 0.15s;
+  opacity: 0;
+}
+.card:hover .deleteBtn {
+  opacity: 1;
+}
+.deleteBtn:hover {
+  background: var(--red-light);
+  color: var(--red);
+}
+.cardTitle {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+  margin-bottom: 0.35rem;
+}
+.cardDesc {
+  font-size: 0.75rem;
+  color: var(--text2);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+.tag {
+  background: var(--surface3);
+  color: var(--muted);
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.15rem 0.45rem;
+  border-radius: 100px;
+}
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.footerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.assigneeWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.assigneeAvatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--violet);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.assigneeName {
+  font-size: 0.72rem;
+  color: var(--text2);
+}
+.dueDate {
+  font-size: 0.68rem;
+  color: var(--text2);
+}
+.overdue {
+  color: var(--red) !important;
+}
+.statusSelect {
+  background: var(--surface3);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  font-family: var(--ff);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* List view */
+.listView {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.listHeader {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.listRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.listRow:last-child {
+  border-bottom: none;
+}
+.listRow:hover {
+  background: var(--surface2);
+}
+.listTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.listBadge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  width: fit-content;
+}
+.listCell {
+  font-size: 0.8rem;
+  color: var(--text2);
+}
+.listActions {
+  display: flex;
+  gap: 0.4rem;
+}
+.listEmpty {
+  padding: 3rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+.editBtn {
+  background: var(--violet-light);
+  color: var(--violet);
+  border: none;
+  border-radius: 5px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--ff);
+}
+.editBtn:hover {
+  background: var(--violet);
+  color: #fff;
+}
+.delBtn {
+  background: var(--red-light);
+  color: var(--red);
+  border: none;
+  border-radius: 5px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--ff);
+}
+.delBtn:hover {
+  background: var(--red);
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .board {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .board {
+    grid-template-columns: 1fr;
+  }
+  .listHeader {
+    display: none;
+  }
+  .listRow {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+}
