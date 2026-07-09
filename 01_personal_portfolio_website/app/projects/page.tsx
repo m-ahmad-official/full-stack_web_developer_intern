@@ -118,29 +118,32 @@ const advancedProjects = [
   {
     id: 11,
     title: "Full Stack E-commerce Website",
-    desc: "Complete online store with cart, Stripe payments, admin panel and order tracking.",
-    tags: ["Next.js", "MongoDB", "Stripe", "Redux"],
+    desc: "A complete coffee brand online store with product listings, cart, Stripe payments, admin panel, and order management.",
+    tags: ["Next.js", "TypeScript", "MongoDB", " NextAuth.js", "CSS Modules"],
     icon: "🛒",
-    github: "https://github.com/yourusername/ecommerce",
-    demo: "https://ecommerce.vercel.app",
+    github:
+      "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/11_full_stack_e-commerce_website",
+    demo: "https://coffeevault.vercel.app",
   },
   {
     id: 12,
     title: "Chat Application using Socket.io",
-    desc: "Real-time messaging with rooms, online presence, file sharing and notifications.",
-    tags: ["React", "Node.js", "Socket.io", "MongoDB"],
+    desc: "Real-time messaging app with private and group chats, online status, typing indicators, and JWT authentication.",
+    tags: ["Next.js", "Node.js", "Express ", "Socket.io", "MongoDB", "JWT"],
     icon: "💬",
-    github: "https://github.com/yourusername/chat-app",
-    demo: "https://chat-app.vercel.app",
+    github:
+      "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/12-chat-application-using-socket.io",
+    demo: "https://chat-socket-io-roan.vercel.app",
   },
   {
     id: 13,
     title: "Full Stack Task Management System",
-    desc: "Kanban board with drag-and-drop, team roles, deadlines, and real-time updates.",
-    tags: ["Next.js", "Express", "MongoDB", "DnD"],
+    desc: " Kanban board with Admin/Member roles, real-time task updates, project management, and priority tracking.",
+    tags: ["Next.js", "Node.js", "Express ", "Socket.io", "MongoDB", "JWT"],
     icon: "🗂️",
-    github: "https://github.com/yourusername/task-manager",
-    demo: "https://task-manager.vercel.app",
+    github:
+      "https://github.com/m-ahmad-official/full-stack_web_developer_intern/tree/main/13_full_stack_task_management_system",
+    demo: "https://flowboard-task.vercel.app",
   },
 ];
 
@@ -277,8 +280,8 @@ export default function ProjectsPage() {
             </div>
             <h2 className={styles.sectionTitle}>Advanced Level Projects</h2>
             <p className={styles.sectionDesc}>
-              Production-grade full-stack applications with real-time features
-              and payments.
+              Production-grade full-stack applications with real-time features,
+              payments, and team collaboration.
             </p>
             <div className={`${styles.sectionLine} ${styles.lineAdvanced}`} />
           </div>
